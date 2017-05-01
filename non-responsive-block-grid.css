@@ -1,0 +1,91 @@
+/* Box-sizing fix! */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+ 
+ /*Utility classes */
+.responsive-img {
+  max-width: 100%;
+}
+
+
+
+
+ul.block-grid {
+  display: flex; /* display elements next to each other */
+  flex-wrap: wrap;
+  list-style: none; /* disable bullets on the LI items */
+  padding-left: 0; /* reset the browser extra padding on UL elements */
+}
+
+ul.block-grid li {   /* here we set padding for all ul.block-grid regarding of whether it is small, medium or large */
+  padding: 5em; /* Adding a 10px padding on a 100% width would not work if it wasn't for box-sizing: border-box! */
+}  
+
+ul.block-grid-small2 > li {
+  width: 50%;
+}
+ul.block-grid-small3 > li {
+  width: 33.333%;
+}
+ul.block-grid-small4 > li {
+  width: 25%;
+}
+.block-grid-small5 > li {
+  width: 20%;
+}
+.block-grid-small6 > li {
+  width: 16.666%;
+}
+
+
+@media only screen and (min-width: 641px) {  
+    /* Classes that apply to medium and larger devices */
+    ul.block-grid-medium2 > li {
+      width: 50%;
+    }
+    ul.block-grid-medium3 > li {
+      width: 33.333%;
+    }
+    ul.block-grid-medium4 > li {
+      width: 25%;
+    }
+    .block-grid-medium5 > li {
+      width: 20%;
+    }
+    .block-grid-medium6 > li {
+      width: 16.666%;
+    }
+    p {
+        font-size: 1.2em;  
+    }
+}
+
+
+
+@media only screen and (min-width: 1025px) {
+    /* Classes that apply to large devices only */
+    ul.block-grid-large2 > li {
+      width: 50%;
+    }
+    ul.block-grid-large3 > li {
+      width: 33.333%;
+    }
+    ul.block-grid-large4 > li {
+      width: 25%;
+    }
+    .block-grid-large5 > li {
+      width: 20%;
+    }
+    .block-grid-large6 > li {
+      width: 16.666%;
+    }
+    p {
+        font-size: 1.2em;  
+    }
+}
