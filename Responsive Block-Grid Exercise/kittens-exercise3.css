@@ -1,1 +1,22 @@
+.kittens-gallery {
+  justify-content: center; /* if there are less elements on the last row, center them instead of sending them to the left */
+  text-align: center; /* This will center the caption text below each image */
+}
 
+.kittens-gallery img {
+  padding: 5px;
+  /*border: 1px solid #999;    // according to the exercise's instruction, we set border around the images of medium and larger devices only and we will do that in media query (which we did below). That is why we commented this out here.*/
+  margin-bottom: 5px;
+}
+
+.kittens-gallery p {
+  font-weight: bold;
+  margin: 0;
+}
+
+
+@media only screen and (min-width: 641px) {    /*we have to set this according to the exercise's instruction. only set border around the images of medium and larger devices*/
+    .kittens-gallery img {
+        border: 1px solid #999;
+    }
+}
